@@ -4,7 +4,7 @@ import {useState} from "react";
 
 const App = () => {
     const addNewExpense = (newExpense) => {
-        setExpenses((prev) => [...prev, newExpense])
+        setExpenses((prev) => [newExpense, ...prev])
     }
 
     const [expenses, setExpenses] = useState([
