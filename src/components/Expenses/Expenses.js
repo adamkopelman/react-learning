@@ -8,7 +8,7 @@ const Expenses = props => {
     const [filteredYear, SetFilteredYear] = useState("All");
 
     const items = props.expenses
-        .filter(expense => (filteredYear === "All" || expense.date.getFullYear() == filteredYear))
+        .filter(expense => (filteredYear === "All" || expense.date.getFullYear().toString() === filteredYear))
         .map(expense => {
             return (
 
